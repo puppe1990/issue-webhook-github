@@ -1,0 +1,44 @@
+
+<%= form_tag(view_issues_path, method: :get) do %>
+  Issue <%= text_field_tag :id, params[:id] %>
+  <%= submit_tag 'Pesquisar', name: nil %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>   
+      <th>Issue id</th>
+      <th>action</th>
+      <th>repository_id</th>
+      <th>repository_name</th>
+      <th>owner_name</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @issues.each do |issue| %>
+    <tr>
+      <td><%= issue.issue_id %></td>
+      <td><%= issue.action %></td>
+      <td><%= issue.repository_id %></td>
+      <td><%= issue.repository_name %></td>
+      <td><%= issue.owner_name %></td>
+      <td><%= issue.created_at %></td>
+      <td><%= issue.updated_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>id</th>
+      <th>action</th>
+      <th>repository_id</th>
+      <th>repository_name</th>
+      <th>owner_name</th>
+      <th>created_at</th>
+      <th>updated_at</th>
+    </tr>
+  </tfoot>
+</table>
+  
