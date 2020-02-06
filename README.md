@@ -1,6 +1,5 @@
-# test-zaitt
 
-1. git clone https://matheus-puppe@bitbucket.org/matheus-puppe/test-zaitt.git
+1. git clone https://github.com/puppe1990/issue-webhook-github.git
 2. cd test-zaitt
 3. sudo docker-compose build
 4. sudo docker-compose up
